@@ -24,6 +24,7 @@ def login():
             return redirect("/admin")
     
     return render_template("login.html")
+@auth_bp.route('/logout')
 @login_required
 def logout():
     logout_user()
